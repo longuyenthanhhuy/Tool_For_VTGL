@@ -123,7 +123,9 @@ namespace Tool.UI
                    
 
                 }
-                Thread.Sleep(500);
+                Random rnd = new Random();
+                int time = rnd.Next(500, 5000);       
+                Thread.Sleep(time);
                 brower.Close();
                 brower.Quit();
             }
