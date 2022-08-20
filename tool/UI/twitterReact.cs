@@ -26,7 +26,7 @@ namespace Tool.UI
             string[] text1Arr = text1.Split('\n');
             string text2 = t2.Text;
             string[] text2Arr = text2.Split('\n');
-            string text3 = t3.Text;
+           
 
             string text4 = t4.Text;
 
@@ -50,6 +50,7 @@ namespace Tool.UI
 
                 IWebDriver brower = new ChromeDriver(cService, options);
                 brower.Navigate().GoToUrl(text4);
+                Thread.Sleep(3000);
                 if (checkBox1.Checked)
                 {
                     try
@@ -66,6 +67,7 @@ namespace Tool.UI
                         
                     }
                 }
+                Thread.Sleep(1000);
                 if (checkBox2.Checked)
                 {
                     try
@@ -79,21 +81,25 @@ namespace Tool.UI
                       
                     }
                 }
+                Thread.Sleep(1000);
                 if (checkBox3.Checked)
                 {
-                   
-                    brower.FindElement(By.ClassName("public-DraftStyleDefault-block public-DraftStyleDefault-ltr")).SendKeys(text2Arr[count]);
+
+                    brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
                     Thread.Sleep(500);
-                    brower.FindElement(By.ClassName("css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr")).Click();
+                    brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
 
                     count++;
-                    if (count==text2Arr.Length)
+                    if (count == text2Arr.Length)
                     {
                         count = 1;
                     }
-                    
-                   
+
+
                 }
+                Thread.Sleep(1000);
+                brower.Close();
+                brower.Quit();
             }
             
         }

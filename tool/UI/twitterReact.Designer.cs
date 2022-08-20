@@ -40,15 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.t5 = new System.Windows.Forms.TextBox();
-            this.t3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(863, 419);
+            this.button1.Location = new System.Drawing.Point(863, 335);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 127);
+            this.button1.Size = new System.Drawing.Size(131, 102);
             this.button1.TabIndex = 0;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
@@ -57,9 +56,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(508, 12);
+            this.checkBox1.Location = new System.Drawing.Point(508, 10);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 24);
+            this.checkBox1.Size = new System.Drawing.Size(78, 20);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Retweet";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -67,9 +67,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(508, 52);
+            this.checkBox2.Location = new System.Drawing.Point(508, 42);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 24);
+            this.checkBox2.Size = new System.Drawing.Size(54, 20);
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Like";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -77,103 +78,90 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(508, 95);
+            this.checkBox3.Location = new System.Drawing.Point(508, 76);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(96, 24);
+            this.checkBox3.Size = new System.Drawing.Size(86, 20);
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Comment";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // t4
             // 
-            this.t4.Location = new System.Drawing.Point(127, 12);
+            this.t4.Location = new System.Drawing.Point(127, 10);
+            this.t4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t4.Name = "t4";
-            this.t4.Size = new System.Drawing.Size(353, 27);
+            this.t4.Size = new System.Drawing.Size(353, 22);
             this.t4.TabIndex = 4;
             // 
             // t1
             // 
-            this.t1.Location = new System.Drawing.Point(22, 127);
+            this.t1.Location = new System.Drawing.Point(22, 102);
+            this.t1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t1.Multiline = true;
             this.t1.Name = "t1";
-            this.t1.Size = new System.Drawing.Size(221, 419);
+            this.t1.Size = new System.Drawing.Size(221, 336);
             this.t1.TabIndex = 5;
             // 
             // t2
             // 
-            this.t2.Location = new System.Drawing.Point(259, 127);
+            this.t2.Location = new System.Drawing.Point(259, 102);
+            this.t2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t2.Multiline = true;
             this.t2.Name = "t2";
-            this.t2.Size = new System.Drawing.Size(221, 359);
+            this.t2.Size = new System.Drawing.Size(221, 288);
             this.t2.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 99);
+            this.label1.Location = new System.Drawing.Point(114, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Profile";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(323, 99);
+            this.label2.Location = new System.Drawing.Point(323, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Random Friend";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 9);
+            this.label3.Location = new System.Drawing.Point(22, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "link twitter";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 50);
+            this.label4.Location = new System.Drawing.Point(22, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 20);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "nguồn profile";
             // 
             // t5
             // 
-            this.t5.Location = new System.Drawing.Point(127, 50);
+            this.t5.Location = new System.Drawing.Point(127, 40);
+            this.t5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t5.Name = "t5";
-            this.t5.Size = new System.Drawing.Size(353, 27);
+            this.t5.Size = new System.Drawing.Size(353, 22);
             this.t5.TabIndex = 11;
-            // 
-            // t3
-            // 
-            this.t3.Location = new System.Drawing.Point(336, 505);
-            this.t3.Name = "t3";
-            this.t3.Size = new System.Drawing.Size(144, 27);
-            this.t3.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(268, 508);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Amount";
             // 
             // twitterReact
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1006, 558);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.t3);
+            this.ClientSize = new System.Drawing.Size(1006, 446);
             this.Controls.Add(this.t5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -186,6 +174,7 @@
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "twitterReact";
             this.Text = "twitterReact";
             this.ResumeLayout(false);
@@ -207,7 +196,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox t5;
-        private System.Windows.Forms.TextBox t3;
-        private System.Windows.Forms.Label label5;
     }
 }

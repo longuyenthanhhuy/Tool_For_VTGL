@@ -28,8 +28,8 @@ namespace Tool
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UI.twitterReact t = new UI.twitterReact();
-            t.ShowDialog();
+            UI.twitterReact twit = new UI.twitterReact();
+            twit.ShowDialog();
             this.Show();
         }
 
