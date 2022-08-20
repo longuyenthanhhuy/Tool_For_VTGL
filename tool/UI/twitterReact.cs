@@ -67,7 +67,7 @@ namespace Tool.UI
                         
                     }
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 if (checkBox2.Checked)
                 {
                     try
@@ -81,15 +81,23 @@ namespace Tool.UI
                       
                     }
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 if (checkBox3.Checked)
                 {
+                    try
+                    {
+                        brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
+                        Thread.Sleep(1000);
+                        brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
 
-                    brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
-                    Thread.Sleep(500);
-                    brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
+                        count++;
+                    }
+                    catch (Exception)
+                    {
 
-                    count++;
+                       
+                    }
+                  
                     if (count == text2Arr.Length)
                     {
                         count = 1;
@@ -97,7 +105,25 @@ namespace Tool.UI
 
 
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
+                if (checkBox4.Checked)
+                {
+                    try
+                    {
+                        brower.FindElement(By.CssSelector("[data-testid='User-Names']")).Click();
+                        Thread.Sleep(2000);
+                        var SpanTag1 = brower.FindElement(By.XPath("//*[.=\"Follow\"]"));
+                        SpanTag1.Click();
+                    }
+                    catch (Exception)
+                    {
+
+                       
+                    }
+                   
+
+                }
+                Thread.Sleep(500);
                 brower.Close();
                 brower.Quit();
             }

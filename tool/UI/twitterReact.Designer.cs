@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.t5 = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -156,12 +157,24 @@
             this.t5.Size = new System.Drawing.Size(353, 22);
             this.t5.TabIndex = 11;
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(508, 104);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(68, 20);
+            this.checkBox4.TabIndex = 12;
+            this.checkBox4.Text = "Follow";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
             // twitterReact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1006, 446);
+            this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.t5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox t5;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }
