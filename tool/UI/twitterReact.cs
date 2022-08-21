@@ -130,7 +130,7 @@ namespace Tool.UI
 
                     }
                     Random rnd = new Random();
-                    int time = rnd.Next(500, 5000);
+                    int time = rnd.Next(500, 2000);
                     Thread.Sleep(time);
                 }
                 
