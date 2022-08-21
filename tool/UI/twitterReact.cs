@@ -29,7 +29,7 @@ namespace Tool.UI
            
 
             string text4 = t4.Text;
-
+            string[] text4Arr = text4.Split('\n');
             string text5 = t5.Text;
             int count = 0;
             foreach (string item in text1Arr) 
@@ -49,87 +49,91 @@ namespace Tool.UI
 
 
                 IWebDriver brower = new ChromeDriver(cService, options);
-                brower.Navigate().GoToUrl(text4);
-                Thread.Sleep(3000);
-                if (checkBox1.Checked)
+                foreach (var lk in text4Arr)
                 {
-                    try
+                    brower.Navigate().GoToUrl(lk);
+                    Thread.Sleep(3000);
+                    if (checkBox1.Checked)
                     {
-                        brower.FindElement(By.CssSelector("[aria-expanded='false'][aria-label='Retweet']")).Click();
-                        Thread.Sleep(500);
-                        brower.FindElement(By.CssSelector("[role='menuitem'][tabindex='0']")).Click();
-
-
-                    }
-                    catch (Exception)
-                    {
-
-                        
-                    }
-                }
-                Thread.Sleep(500);
-                if (checkBox2.Checked)
-                {
-                    try
-                    {
-                        brower.FindElement(By.CssSelector("[aria-label='Like'][role='button']")).Click();
-
-                    }
-                    catch (Exception)
-                    {
-
-                      
-                    }
-                }
-                Thread.Sleep(500);
-                if (checkBox3.Checked)
-                {
-                    try
-                    {
-                        brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
-                        Thread.Sleep(1000);
-                        brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
-
-                        count++;
-                    }
-                    catch (Exception)
-                    {
-
-                       
-                    }
-                  
-                    if (count == text2Arr.Length)
-                    {
-                        count = 1;
-                    }
-
-
-                }
-                Thread.Sleep(500);
-                if (checkBox4.Checked)
-                {
-                   
-                       
-                        foreach (var fl in brower.FindElements(By.XPath("//*[.=\"Follow\"]")))
-                     {
-                            fl.Click();
-                            Thread.Sleep(1000);
                         try
                         {
-                            brower.FindElement(By.CssSelector("[data-testid='confirmationSheetCancel']")).Click();
+                            brower.FindElement(By.CssSelector("[aria-expanded='false'][aria-label='Retweet']")).Click();
+                            Thread.Sleep(500);
+                            brower.FindElement(By.CssSelector("[role='menuitem'][tabindex='0']")).Click();
+
+
                         }
                         catch (Exception)
                         {
-                        }
-                     }
-                        
-                   
-                   
 
+
+                        }
+                    }
+                    Thread.Sleep(500);
+                    if (checkBox2.Checked)
+                    {
+                        try
+                        {
+                            brower.FindElement(By.CssSelector("[aria-label='Like'][role='button']")).Click();
+
+                        }
+                        catch (Exception)
+                        {
+
+
+                        }
+                    }
+                    Thread.Sleep(500);
+                    if (checkBox3.Checked)
+                    {
+                        try
+                        {
+                            brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
+                            Thread.Sleep(1000);
+                            brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
+
+                            count++;
+                        }
+                        catch (Exception)
+                        {
+
+
+                        }
+
+                        if (count == text2Arr.Length)
+                        {
+                            count = 1;
+                        }
+
+
+                    }
+                    Thread.Sleep(500);
+                    if (checkBox4.Checked)
+                    {
+
+
+                        foreach (var fl in brower.FindElements(By.XPath("//*[.=\"Follow\"]")))
+                        {
+                            fl.Click();
+                            Thread.Sleep(1000);
+                            try
+                            {
+                                brower.FindElement(By.CssSelector("[data-testid='confirmationSheetCancel']")).Click();
+                            }
+                            catch (Exception)
+                            {
+                            }
+                        }
+
+
+
+
+                    }
+                    Random rnd = new Random();
+                    int time = rnd.Next(500, 5000);
+                    Thread.Sleep(time);
                 }
-                Random rnd = new Random();
-                int time = rnd.Next(500, 5000);       
-                Thread.Sleep(time);
+                
                 brower.Close();
                 brower.Quit();
             }

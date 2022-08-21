@@ -32,7 +32,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.t4 = new System.Windows.Forms.TextBox();
             this.t1 = new System.Windows.Forms.TextBox();
             this.t2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.t5 = new System.Windows.Forms.TextBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.t4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -79,21 +79,13 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(508, 76);
+            this.checkBox3.Location = new System.Drawing.Point(637, 42);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(86, 20);
             this.checkBox3.TabIndex = 3;
             this.checkBox3.Text = "Comment";
             this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // t4
-            // 
-            this.t4.Location = new System.Drawing.Point(127, 10);
-            this.t4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.t4.Name = "t4";
-            this.t4.Size = new System.Drawing.Size(353, 22);
-            this.t4.TabIndex = 4;
             // 
             // t1
             // 
@@ -136,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 7);
+            this.label3.Location = new System.Drawing.Point(600, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 9;
@@ -162,7 +154,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(508, 104);
+            this.checkBox4.Location = new System.Drawing.Point(637, 10);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(68, 20);
@@ -170,12 +162,23 @@
             this.checkBox4.Text = "Follow";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
+            // t4
+            // 
+            this.t4.Location = new System.Drawing.Point(508, 102);
+            this.t4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.t4.Multiline = true;
+            this.t4.Name = "t4";
+            this.t4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.t4.Size = new System.Drawing.Size(221, 336);
+            this.t4.TabIndex = 13;
+            // 
             // twitterReact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1006, 446);
+            this.Controls.Add(this.t4);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.t5);
             this.Controls.Add(this.label4);
@@ -184,7 +187,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t2);
             this.Controls.Add(this.t1);
-            this.Controls.Add(this.t4);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -203,7 +205,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox t4;
         private System.Windows.Forms.TextBox t1;
         private System.Windows.Forms.TextBox t2;
         private System.Windows.Forms.Label label1;
@@ -212,5 +213,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox t5;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox t4;
     }
 }
