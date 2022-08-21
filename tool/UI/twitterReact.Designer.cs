@@ -101,6 +101,7 @@
             this.t1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t1.Multiline = true;
             this.t1.Name = "t1";
+            this.t1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.t1.Size = new System.Drawing.Size(221, 336);
             this.t1.TabIndex = 5;
             // 
@@ -110,7 +111,8 @@
             this.t2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.t2.Multiline = true;
             this.t2.Name = "t2";
-            this.t2.Size = new System.Drawing.Size(221, 288);
+            this.t2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.t2.Size = new System.Drawing.Size(231, 333);
             this.t2.TabIndex = 6;
             // 
             // label1
