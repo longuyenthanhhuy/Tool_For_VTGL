@@ -31,7 +31,7 @@ namespace Tool.UI
             string text4 = t4.Text;
             string[] text4Arr = text4.Split('\n');
             string text5 = t5.Text;
-            int count = 0;
+          
             foreach (string item in text1Arr) 
             {
                 ChromeDriverService cService = ChromeDriverService.CreateDefaultService();
@@ -49,6 +49,7 @@ namespace Tool.UI
 
 
                 IWebDriver brower = new ChromeDriver(cService, options);
+                int count = 0;
                 foreach (var lk in text4Arr)
                 {
                     brower.Navigate().GoToUrl(lk);
@@ -58,7 +59,7 @@ namespace Tool.UI
                         try
                         {
                             brower.FindElement(By.CssSelector("[aria-expanded='false'][aria-label='Retweet']")).Click();
-                            Thread.Sleep(500);
+                            Thread.Sleep(1000);
                             brower.FindElement(By.CssSelector("[role='menuitem'][tabindex='0']")).Click();
 
 
@@ -88,9 +89,10 @@ namespace Tool.UI
                     {
                         try
                         {
-                            brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
-                            Thread.Sleep(1000);
-                            brower.FindElement(By.XPath("//*[.=\"Reply\"]")).Click();
+                            brower.FindElement(By.CssSelector("[aria-label='Tweet text'][data-testid='tweetTextarea_0']")).SendKeys(text2Arr[count]);
+                            Thread.Sleep(2000);
+                            //brower.FindElement(By.XPath("//*[.=\"Reply\"]")).Click();
+                            brower.FindElement(By.CssSelector("[role='button'][data-testid='tweetButtonInline']")).Click();
 
                             count++;
                         }
@@ -100,10 +102,7 @@ namespace Tool.UI
 
                         }
 
-                        if (count == text2Arr.Length)
-                        {
-                            count = 1;
-                        }
+                     
 
 
                     }
@@ -114,7 +113,8 @@ namespace Tool.UI
                         {
                             try
                             {
-                                brower.FindElement(By.XPath("//*[.=\"Follow\"]")).Click();
+                                brower.FindElement(By.CssSelector("[class='css-901oao css-16my406 css-1hf3ou5 r-poiln3 r-1b43r93 r-1cwl3u0 r-bcqeeo r-qvutc0']")).Click();
+                                //brower.FindElement(By.XPath("//*[.=\"Follow\"]")).Click();
                                 Thread.Sleep(1000);
                                 
                             }
