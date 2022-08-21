@@ -90,7 +90,7 @@ namespace Tool.UI
                         {
                             brower.FindElement(By.CssSelector("[class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']")).SendKeys(text2Arr[count]);
                             Thread.Sleep(1000);
-                            brower.FindElement(By.CssSelector("[class='css-18t94o4 css-1dbjc4n r-l5o3uw r-42olwf r-sdzlij r-1phboty r-rs99b7 r-19u6a5r r-2yi16 r-1qi8awa r-1ny4l3l r-ymttw5 r-o7ynqc r-6416eg r-lrvibr']")).Click();
+                            brower.FindElement(By.XPath("//*[.=\"Reply\"]")).Click();
 
                             count++;
                         }
@@ -110,23 +110,20 @@ namespace Tool.UI
                     Thread.Sleep(500);
                     if (checkBox4.Checked)
                     {
-
-
-                        foreach (var fl in brower.FindElements(By.XPath("//*[.=\"Follow\"]")))
+                        for (int i = 0; i < 3; i++)
                         {
-                            fl.Click();
-                            Thread.Sleep(1000);
                             try
                             {
-                                brower.FindElement(By.CssSelector("[data-testid='confirmationSheetCancel']")).Click();
+                                brower.FindElement(By.XPath("//*[.=\"Follow\"]")).Click();
+                                Thread.Sleep(1000);
+                                
                             }
                             catch (Exception)
                             {
+
                             }
+                            
                         }
-
-
-
 
                     }
                     Random rnd = new Random();
