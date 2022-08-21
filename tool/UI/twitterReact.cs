@@ -108,18 +108,22 @@ namespace Tool.UI
                 Thread.Sleep(500);
                 if (checkBox4.Checked)
                 {
-                    try
-                    {
-                        brower.FindElement(By.CssSelector("[data-testid='User-Names']")).Click();
-                        Thread.Sleep(2000);
-                        var SpanTag1 = brower.FindElement(By.XPath("//*[.=\"Follow\"]"));
-                        SpanTag1.Click();
-                    }
-                    catch (Exception)
-                    {
-
+                   
                        
-                    }
+                        foreach (var fl in brower.FindElements(By.XPath("//*[.=\"Follow\"]")))
+                     {
+                            fl.Click();
+                            Thread.Sleep(1000);
+                        try
+                        {
+                            brower.FindElement(By.CssSelector("[data-testid='confirmationSheetCancel']")).Click();
+                        }
+                        catch (Exception)
+                        {
+                        }
+                     }
+                        
+                   
                    
 
                 }
